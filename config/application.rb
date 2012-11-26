@@ -61,5 +61,10 @@ module Konsertforeninga
 
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.1'
+    
+    # Force locale on Heroku
+    I18n.load_path += Dir[Rails.root.join('config', 'locales', '*.yml').to_s]
+    I18n.locale = :da
+    
   end
 end
