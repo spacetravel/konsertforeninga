@@ -1,0 +1,29 @@
+ActiveAdmin.register Venue do
+  
+  
+   
+  config.filters = false
+  config.comments = false
+  
+  menu :label => "Spillesteder", :priority => 14
+  
+  index do                            
+    column :name do |venue|
+      link_to venue.name, edit_admin_venue_path(venue)
+    end             
+    column :link
+    column :desc
+    default_actions                   
+  end
+  
+  form do |f|
+    f.inputs "Detaljer" do
+      f.input :name, :label => "Navn"
+      f.input :link, :label => "Lenke"
+      f.input :desc, :label => "Beskrivelse"
+    end
+    
+    f.buttons
+  end
+
+end
