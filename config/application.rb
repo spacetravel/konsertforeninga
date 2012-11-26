@@ -64,7 +64,7 @@ module Konsertforeninga
     
     # Force locale on Heroku
     I18n.load_path += Dir[Rails.root.join('config', 'locales', '*.yml').to_s]
-    I18n.locale = :da
+    I18n.locale = :nb
     
   end
 end
