@@ -1,17 +1,21 @@
 source 'https://rubygems.org'
 
 gem 'rails', '3.2.9'
-gem 'annotate', '2.5.0'
 gem 'activeadmin'
 gem 'meta_search',    '>= 1.1.0.pre'
-gem 'thin'
 gem 'paperclip'
 gem 'tinymce_rails'
  
+ 
+group :development, :test do
+  gem 'thin'
+  gem 'annotate', '2.5.0'
+  gem 'sqlite3'
+end
+
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'sqlite3'
 
 
 # Gems used only for assets and not required
@@ -27,6 +31,10 @@ group :assets do
 end
 
 gem 'jquery-rails'
+
+group :production do
+  gem "pg"
+end
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
