@@ -8,7 +8,6 @@ gem 'tinymce_rails'
  
  
 group :development, :test do
-  gem 'thin'
   gem 'annotate', '2.5.0'
   gem 'sqlite3'
 end
