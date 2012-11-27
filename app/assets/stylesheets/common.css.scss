@@ -34,6 +34,14 @@ body {
 	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
+body a
+{
+	color:black;
+	&:hover {
+		color:black;
+	}
+}
+
 body,html{
  height:100%;
 }
@@ -47,8 +55,39 @@ body,html{
  margin-top:-40px;
 }
 
-.navbar-inner {	
-  -webkit-border-radius: 0;
-  -moz-border-radius: 0;
-  border-radius: 0;
+.overskrift {
+	
+	padding-bottom:30px;
+}
+
+.seriedesc
+{
+	padding-right:350px;
+}
+
+.post 
+{
+	padding-bottom:30px;
+}
+
+html,body
+{
+height:100%;
+}
+
+.innhold
+{
+min-height: 100%;
+padding-bottom:100px;
+}
+
+
+.footer
+{
+text-align:right;
+position: relative;
+margin-top: -20px; /* negative value of footer height */
+height: 20px;
+clear:both;
+color:#fff;
 }

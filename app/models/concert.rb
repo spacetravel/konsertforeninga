@@ -22,8 +22,8 @@ class Concert < ActiveRecord::Base
   validates_attachment :photo, :presence => true
     
   has_attached_file :photo,
-     :styles => { :medium => "300x300>", :thumb => "100x100>" },
-     :path => "public/system/:class/:id/:filename",
-     :url => "/system/:class/:id/:basename.:extension"
+     :styles => { :large => "600x600", :medium => "300x300>", :thumb => "100x100>" },
+     :path => "public/system/:class/:id/:style/:filename",
+     :url => "/system/:class/:id/:style/:basename.:extension"
         
 end

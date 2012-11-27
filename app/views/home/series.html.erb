@@ -1,0 +1,15 @@
+<div class="container">
+	<div class="overskrift"><h1>Konsertserier</h1></div>
+	
+		<% @series.each do |serie| %>
+		<div class="span4" style="min-height:230px; padding:auto">
+			<div style="min-height:100px"><%= image_tag serie.photo.url(:medium) %><br /></div>
+			<table class="table table-condensed">
+				<tr><td>The Thing m/ Otomo ... </td><td>19. Mai</td></tr>
+				<tr><td>Mikkel Rockerev </td><td>14. Juni</td></tr>
+				<tr><td>Jord, Eld och Vatten </td><td>21. Juni</td></tr>
+			</table>
+		</div>
+		<% end %>
+</div>
+

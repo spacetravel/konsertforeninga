@@ -1,0 +1,12 @@
+<div class="container">
+	<h1>Konsertserier</h1><br />
+		<% @series.each do |serie| %>
+		<div class="post">
+			<div style="float:left"><h2><%= link_to serie.name, '/konsertserier/'+serie.id.to_s %></h2></div>
+			<div style="float:right"><%= image_tag serie.photo.url(:medium) %></div>
+			<div class="clearfix"></div>
+			<div class="seriedesc"><%= serie.desc %></div>
+		</div>
+		<% end %>
+</div>
+

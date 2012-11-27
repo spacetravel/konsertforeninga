@@ -1,0 +1,10 @@
+<div class="container">
+	<h1>Nyheter</h1><br />
+	
+	<% @news.each do |nyhet| %>
+		<h2><%= link_to nyhet.title, '/nyheter/'+nyhet.id.to_s %></h2>
+ 	    <i><b><%= nyhet.serie.name %></b> | Publisert <%= nyhet.created_at.to_s(:short)	 %></i><br /><br />
+		<%= nyhet.content.html_safe %>
+	<% end %>	
+</div>
+
