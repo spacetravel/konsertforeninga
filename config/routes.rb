@@ -5,7 +5,10 @@ Konsertforeninga::Application.routes.draw do
   
   root :to => "home#index"
   
-
+  match "/om" => "home#about"
+  match "/medlem" => "home#member"
+  match "/english" => "home#english"
+  
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

@@ -1,0 +1,54 @@
+#main_menu ul 
+{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#main_menu li
+{
+  float: left;
+  margin: 0 1.15em;
+  /*    margin: 0 auto;*/
+}
+
+#main_menu 
+{
+  /*    width: auto;*/
+  /*    margin: 0 auto;*/
+  text-align: center;
+}
+
+.logo2 {
+  margin-left:auto;
+  margin-right:auto;
+  width:940px;
+  padding-left:50px;
+}
+
+#english {
+	float:right
+}
+
+body {
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+body,html{
+ height:100%;
+}
+
+.innhold{
+ min-height:100%;
+}
+
+.footer{
+ height:40px;
+ margin-top:-40px;
+}
+
+.navbar-inner {	
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+}
