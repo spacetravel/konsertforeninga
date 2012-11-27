@@ -1,17 +1,17 @@
 <div class="container">
-	<h1>Konserter fremover</h1><br />
+	<h1>Kommende konserter</h1><br />
 	<table class="table">
 	<% @konserter.each do |konsert| %>
 		<tr>
-	 	    <td><%= konsert.show_date.strftime("%B %d, %Y") %></td>
-	 	    <td><%= image_tag konsert.photo.url(:thumb) %></td>
+	 	    <td><%= konsert.serie.name %> <br /><%= konsert.show_date.strftime("%d. %B  %Y") %></td>
+	 	    <td><%= link_to image_tag(konsert.photo.url(:thumb)),'/konserter/'+konsert.id.to_s %></td>
 			<td><%= link_to konsert.title, '/konserter/'+konsert.id.to_s %></td>
 	 		<td><%= konsert.price %> kr</b></td>
 	 		<td><%= konsert.show_time %></b></td>
-	 		<td><%= konsert.serie.name %></b></td>
+	 		<td></b></td>
 		</tr>
 	<% end %>	
 	</table>
-	
+	<%= link_to "Se tidligere konserter", '/tidligere_konserter/' %>
 </div>
 

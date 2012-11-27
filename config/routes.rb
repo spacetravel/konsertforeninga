@@ -13,7 +13,10 @@ Konsertforeninga::Application.routes.draw do
   match "/konsertserier" => "konsertserier#index"
   match "/konsertserier/:id/" => "konsertserier#show"
   match "/konserter" => "konserter#index"
+  match "/konserter/:id" => "konserter#show"
+  match "/tidligere_konserter/" => "konserter#old"
 
+  
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

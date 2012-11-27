@@ -1,11 +1,14 @@
 <div class="container">
-	<h1>Konserter fremover</h1><br />
-	
-	<% @konserter.each do |konsert| %>
-		<h2><%= link_to konsert.title, '/konserter/'+konsert.id.to_s %></h2>
- 		<i><b><%= konsert.serie.name %></b> | Publisert <%= konsert.created_at.to_s(:short)	 %></i><br /><br />
- 	    <%= image_tag konsert.photo.url(:large) %>
-		<%= konsert.desc.html_safe %>
-	<% end %>	
+		<table class="table">
+			<tr>
+				<td><h2><%= @konsert.show_date.to_s(:short) %> | <%= @konsert.serie.name %></h2><h1><%= @konsert.title %></h1></td>
+			</tr><tr>
+ 	    		<td><%= image_tag @konsert.photo.url(:large) %></td>
+			</tr><tr>
+ 				<td><b><%= @konsert.show_time %> | <%= @konsert.price %> kr </b> 
+			</tr><tr>
+				<td><%= @konsert.desc.html_safe %></td>
+			</tr>
+		</table>
 </div>
 
