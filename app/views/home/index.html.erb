@@ -6,7 +6,7 @@
 		<div class="span4" style="min-height:230px; padding:auto">
 			<div style="min-height:100px"><%= image_tag serie.photo.url(:medium) %><br /></div>
 				<table class="table table-condensed">
-					<% serie.concerts.each do |concert| %>
+					<% serie.concerts.take(4).each do |concert| %>
 						<tr><td><%= link_to truncate(concert.title, :length => 30), '/konserter/'+concert.id.to_s %></td><td><%= concert.show_date.to_s(:short) %></td></tr>
 					<% end %>
 				</table>
