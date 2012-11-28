@@ -1,7 +1,7 @@
 class KonsertserierController < ApplicationController
 
   def index
-    @series = Serie.all
+    @series = Serie.order('created_at ASC')
   end
   
   def show
