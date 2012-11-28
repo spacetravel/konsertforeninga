@@ -23,5 +23,7 @@ class Serie < ActiveRecord::Base
   has_attached_file :photo,
      :styles => { :medium => "300x300>", :thumb => "100x100>" },
      :path => "public/system/:class/:id/:style/:filename",
+     :storage => :s3,
+     :s3_credentials => "#{RAILS_ROOT}/config/s3.yml",
      :url => "/system/:class/:id/:style/:basename.:extension"
 end

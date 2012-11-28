@@ -5,7 +5,7 @@ gem 'activeadmin'
 gem 'meta_search',    '>= 1.1.0.pre'
 gem 'paperclip'
 gem 'tinymce_rails'
- 
+gem 'aws-s3'
  
 group :development, :test do
   gem 'annotate', '2.5.0'
