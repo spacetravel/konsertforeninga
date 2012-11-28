@@ -9,7 +9,7 @@
 	<% @news.take(4).each do |nyhet| %>
 		<tbody>
 			<tr>
-				<td><%= nyhet.serie.name %> </td><td><b> <%= link_to nyhet.title, '/nyheter/'+nyhet.id.to_s %></b></td><td><%= l(nyhet.created_at,:format => '%d. %B') %></td>
+				<td><%= nyhet.serie.name %> </td><td> <%= link_to nyhet.title, '/nyheter/'+nyhet.id.to_s %></td><td><%= l(nyhet.created_at,:format => '%d. %B') %></td>
 			</tr>
 		</tbody>
 	<% end %>
