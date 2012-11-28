@@ -8,11 +8,11 @@ ActiveAdmin.register Venue do
   menu :label => "Spillesteder", :priority => 14
   
   index do                            
-    column :name do |venue|
+    column "Navn", :name do |venue|
       link_to venue.name, edit_admin_venue_path(venue)
     end             
-    column :link
-    column :desc
+    column "Nettadresse", :link
+    column "Beskrivelse", :desc
     default_actions                   
   end
   
