@@ -8,6 +8,8 @@ nb:
       pagination:
           empty:
               "Ingen treff"
+      create_model:
+          "Opprett %{model}"
       new_model: 
           "Ny %{model}"
       edit_model:

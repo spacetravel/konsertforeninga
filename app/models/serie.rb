@@ -17,6 +17,8 @@ class Serie < ActiveRecord::Base
 
 
   validates_attachment :photo, :presence => true
+  validates :name, presence: true
+  validates :desc, presence: true
     
   has_attached_file :photo,
      :styles => { :medium => "300x300>", :thumb => "100x100>" },

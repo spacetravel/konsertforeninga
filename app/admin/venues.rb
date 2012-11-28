@@ -1,6 +1,6 @@
 ActiveAdmin.register Venue do
-  
-  
+
+  actions :all, :except => [:show]
    
   config.filters = false
   config.comments = false

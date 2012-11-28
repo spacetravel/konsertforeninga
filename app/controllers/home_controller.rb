@@ -2,6 +2,7 @@ class HomeController < ApplicationController
 
   def index
     @series = Serie.all
+    @news = NewsBulletin.order('created_at DESC')
   end
   
   def nyhet

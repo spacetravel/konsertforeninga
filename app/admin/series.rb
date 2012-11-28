@@ -1,5 +1,7 @@
 ActiveAdmin.register Serie do
   
+  actions :all, :except => [:show]
+  
   config.filters = false
   config.comments = false
   

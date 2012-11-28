@@ -3,7 +3,7 @@
 	<table class="table">
 	<% @konserter.each do |konsert| %>
 	<tr>
- 	    <td><%= konsert.serie.name %> <br /><%= konsert.show_date.strftime("%d. %B  %Y") %></td>
+ 	    <td><%= konsert.serie.name %> <br /><%= l(konsert.show_date,:format => '%d. %B') %></td>
  	    <td><%= link_to image_tag(konsert.photo.url(:thumb)),'/konserter/'+konsert.id.to_s %></td>
 		<td><%= link_to konsert.title, '/konserter/'+konsert.id.to_s %></td>
  		<td><%= konsert.price %> kr</b></td>

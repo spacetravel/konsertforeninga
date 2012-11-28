@@ -1,20 +1,37 @@
 <div class="container">
 		<div class="span9">
+	<table class="table">
+		<thead>
+			<tr>
+				<th><h3>Nyheter</h3></th>
+			</tr>
+		</thead>
+	<% @news.take(4).each do |nyhet| %>
+		<tbody>
+			<tr>
+				<td><%= nyhet.serie.name %> </td><td><b> <%= link_to nyhet.title, '/nyheter/'+nyhet.id.to_s %></b></td><td><%= l(nyhet.created_at,:format => '%d. %B') %></td>
+			</tr>
+		</tbody>
+	<% end %>
+	</table>
+</div>
+	<div class="span9">
+	 Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanitatis per seacula quarta decima et quinta decima. Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in futurum.
+	</div>
+	<div class="span9">
 		<br /><br />
 	<% @series.each do |serie| %>
 		<% unless serie.concerts.empty? %>
 		<div class="span4" style="min-height:230px; padding:auto">
 			<div style="min-height:100px"><%= image_tag serie.photo.url(:medium) %><br /></div>
 				<table class="table table-condensed">
-					<% serie.concerts.take(4).each do |concert| %>
-						<tr><td><%= link_to truncate(concert.title, :length => 30), '/konserter/'+concert.id.to_s %></td><td><%= concert.show_date.to_s(:short) %></td></tr>
+					<% serie.concerts.where("show_date > ?", Time.now).order('show_date ASC').take(4).each do |concert| %>
+						<tr><td><%= link_to truncate(concert.title, :length => 30), '/konserter/'+concert.id.to_s %></td><td><%= l(concert.show_date, :format => '%d. %b') %></td></tr>
 					<% end %>
 				</table>
 			</div>
 	    <% end %>
     <% end %>
 		</div>
-	<div class="span9">
-	 Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanitatis per seacula quarta decima et quinta decima. Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in futurum.
-	</div>
+	
 </div>

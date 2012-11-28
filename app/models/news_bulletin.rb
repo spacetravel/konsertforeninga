@@ -14,4 +14,8 @@ class NewsBulletin < ActiveRecord::Base
   attr_accessible :title, :content, :serie_id
   
   belongs_to :serie
+
+  validates :title, presence: true
+  validates :serie_id, presence: true
+  validates :content, presence: true
 end

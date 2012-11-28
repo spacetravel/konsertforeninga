@@ -66,5 +66,6 @@ module Konsertforeninga
     I18n.load_path += Dir[Rails.root.join('config', 'locales', '*.yml').to_s]
     I18n.locale = :nb
     
+    
   end
 end

@@ -1,5 +1,7 @@
 ActiveAdmin.register NewsBulletin do
 
+  actions :all, :except => [:show]
+
   filter :title
   filter :content
   

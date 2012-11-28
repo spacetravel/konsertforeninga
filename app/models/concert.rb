@@ -20,7 +20,14 @@ class Concert < ActiveRecord::Base
   belongs_to :venue
 
   validates_attachment :photo, :presence => true
-    
+  validates :title, presence: true
+  validates :desc, presence: true
+  validates :show_date, presence: true
+  validates :show_time, presence: true
+  validates :price, presence: true
+  validates :serie_id, presence: true
+  validates :venue_id, presence: true
+
   has_attached_file :photo,
      :styles => { :large => "600x600", :medium => "300x300>", :thumb => "100x100>" },
      :path => "public/system/:class/:id/:style/:filename",

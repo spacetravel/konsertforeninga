@@ -1,6 +1,6 @@
 <div class="container">
 	<h1><%= @nyhet.title %></h1>
-    <i><b><%= @nyhet.serie.name %></b> | Publisert <%= @nyhet.created_at.to_s(:short)	 %></i><br /><br />
+    <i><b><%= @nyhet.serie.name %></b> | Publisert <%= l(@nyhet.created_at,:format => '%d. %B %Y')	 %></i><br /><br />
 	<%= @nyhet.content.html_safe %>
 	
 </div>

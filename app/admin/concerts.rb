@@ -1,4 +1,7 @@
 ActiveAdmin.register Concert do
+
+  actions :all, :except => [:show]
+  
   filter :title
   filter :desc 
      
