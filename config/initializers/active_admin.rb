@@ -11,6 +11,7 @@ ActiveAdmin.setup do |config|
       I18n.locale = :nb
   end
   
+  
   config.site_title_link = "/"    ## Rails url helpers do not work here
   config.site_title_image = "/assets/konsertforeninga-logo-black.png"
   
