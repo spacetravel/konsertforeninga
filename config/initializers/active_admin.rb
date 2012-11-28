@@ -12,7 +12,7 @@ ActiveAdmin.setup do |config|
   end
   
   config.site_title_link = "/"    ## Rails url helpers do not work here
-  config.site_title_image = "/assets/konsertforeninga-logo-small.png"
+  config.site_title_image = "/assets/konsertforeninga-logo-black.png"
   
   config.register_javascript "/assets/tiny_mce/tiny_mce.js"
   

@@ -43,7 +43,6 @@ ActiveAdmin.register Concert do
             
       f.input :price, :label => "Pris"
       f.input :photo, :as => :file, :input_html => { :multipart => true }, :label => "Bilde", :hint => f.template.image_tag(f.object.photo.url(:medium))
-      f.input :short_desc, :label => "Ingress"
       f.input :desc, :class => "tinymce", :label => "Tekst",
     end
     

@@ -14,7 +14,7 @@
 #
 
 class Concert < ActiveRecord::Base
-  attr_accessible :title, :short_desc, :desc, :show_date, :show_time, :price, :serie_id, :venue_id, :photo
+  attr_accessible :title, :desc, :show_date, :show_time, :price, :serie_id, :venue_id, :photo
   
   belongs_to :serie
   belongs_to :venue
