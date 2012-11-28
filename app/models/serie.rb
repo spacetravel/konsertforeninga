@@ -25,6 +25,6 @@ class Serie < ActiveRecord::Base
      :path => "/system/:class/:id/:style/:filename",
      :storage => :s3,
      :bucket => 'konsertforeninga',
-     :url  => ":s3_eu_url",
+     :url  => :s3_eu_url,
      :s3_credentials => "#{Rails.root}/config/s3.yml"
 end
