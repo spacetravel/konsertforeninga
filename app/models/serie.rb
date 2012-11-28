@@ -22,6 +22,6 @@ class Serie < ActiveRecord::Base
     
   has_attached_file :photo,
      :styles => { :medium => "300x300>", :thumb => "100x100>" },
-     :path => "public/system/:class/:id/:styles/:filename",
-     :url => "/system/:class/:id/:styles/:basename.:extension"
+     :path => "public/system/:class/:id/:style/:filename",
+     :url => "/system/:class/:id/:style/:basename.:extension"
 end
