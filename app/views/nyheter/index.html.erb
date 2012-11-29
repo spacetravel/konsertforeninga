@@ -5,10 +5,9 @@
 		
 		<h2><%= link_to nyhet.title, '/nyheter/'+nyhet.id.to_s %></h2>
  	    <b><%= nyhet.serie.name %></b> <i>| Publisert <%= l(nyhet.created_at,:format => '%d. %B %Y')	 %></i><br /><br />
-		<table><tbody><tr>
-		<td>	<div style="padding:10px"><%= image_tag nyhet.photo.url(:medium) unless image_tag nyhet.photo.url(:medium).nil? %></div>
-		</td><td><%= nyhet.content.html_safe %></td>
-		</tr></tbody></table>
+		<div style="padding-right:10px;float:left"><%= image_tag nyhet.photo.url(:medium) unless nyhet.photo.url.nil?  %></div>
+		<%= nyhet.content.html_safe %>
+		<div class="clearfix"></div>
 	<% end %>	
 </div>
 

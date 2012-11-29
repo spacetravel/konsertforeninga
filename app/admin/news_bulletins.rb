@@ -10,8 +10,8 @@ ActiveAdmin.register NewsBulletin do
   config.comments = false
   
   index do
-    column "Bilde", :photo do |concert|
-      image_tag concert.photo.url(:thumb)
+    column "Bilde", :photo do |news|
+      image_tag news.photo.url(:thumb)
     end
     column "Overskrift", :title do |news|
       link_to news.title, edit_admin_news_bulletin_path(news)

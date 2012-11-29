@@ -3,10 +3,10 @@ nb:
       login:
           title:
               "Logg inn"
-      failute:
+      failure:
           admin_user:
               unauthenticated:
-                  " .."
+                  "Innloggin"
       sessions:
           admin_user:
               signed_in: 

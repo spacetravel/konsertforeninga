@@ -1,10 +1,8 @@
 <div class="container">
 	<h1><%= @nyhet.title %></h1>
     <i><b><%= @nyhet.serie.name %></b> | Publisert <%= l(@nyhet.created_at,:format => '%d. %B %Y')	 %></i><br /><br />
-	<table><tbody><tr>
-	<td>	<div style="padding:10px"><%= image_tag @nyhet.photo.url(:medium) unless image_tag @nyhet.photo.url(:medium).nil? %></div>
-	</td><td><%= @nyhet.content.html_safe %></td>
-	</tr></tbody></table>
+	<div style="float:left;padding:10px"><%= image_tag @nyhet.photo.url(:large) %></div>
+	<%= @nyhet.content.html_safe %>
 	
 </div>
 

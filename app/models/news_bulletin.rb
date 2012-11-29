@@ -19,10 +19,10 @@ class NewsBulletin < ActiveRecord::Base
   validates :serie_id, presence: true
   validates :content, presence: true
   
-    validates_attachment :photo, :presence => true
+  validates_attachment :photo, :presence => true
     
   has_attached_file :photo,
-     :styles => { :medium => "300x300>", :thumb => "50x50>" },
+     :styles => { :large => "300x300>", :medium => "200x200>", :thumb => "50x50>" },
      :path => "/system/:class/:id/:style/:filename",
      :storage => :s3,
      :bucket => 'konsertforeninga',
