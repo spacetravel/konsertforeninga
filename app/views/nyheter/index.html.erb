@@ -6,7 +6,7 @@
 		<h2><%= link_to nyhet.title, '/nyheter/'+nyhet.id.to_s %></h2>
  	    <b><%= nyhet.serie.name %></b> <i>| Publisert <%= l(nyhet.created_at,:format => '%d. %B %Y')	 %></i><br /><br />
 		<table><tbody><tr>
-		<td>	<div style="padding:10px"><%= image_tag nyhet.photo.url(:medium) %></div>
+		<td>	<div style="padding:10px"><%= image_tag nyhet.photo.url(:medium) unless image_tag nyhet.photo.url(:medium).nil? %></div>
 		</td><td><%= nyhet.content.html_safe %></td>
 		</tr></tbody></table>
 	<% end %>	
