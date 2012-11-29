@@ -10,6 +10,9 @@ ActiveAdmin.register NewsBulletin do
   config.comments = false
   
   index do
+    column "Bilde", :photo do |concert|
+      image_tag concert.photo.url(:thumb)
+    end
     column "Overskrift", :title do |news|
       link_to news.title, edit_admin_news_bulletin_path(news)
     end
@@ -23,7 +26,9 @@ ActiveAdmin.register NewsBulletin do
     f.inputs "Detaljer" do
       f.input :serie, :label => "Konsertserie"
       f.input :title, :label => "Overskrift"
+      f.input :photo, :as => :file, :input_html => { :multipart => true }, :label => "Bilde", :hint => f.template.image_tag(f.object.photo.url(:medium))
       f.input :content, :label => "Innhold"
+      
     end
     
     f.buttons
