@@ -3,6 +3,8 @@ nb:
       login:
           title:
               "Logg inn"
+          submit:
+             "Logg inn"
       failure:
           admin_user:
               unauthenticated:
