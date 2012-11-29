@@ -1,5 +1,12 @@
 nb:
   devise:
+      login:
+          title:
+              "Logg inn"
+      failute:
+          admin_user:
+              unauthenticated:
+                  " .."
       sessions:
           admin_user:
               signed_in: 
