@@ -18,6 +18,7 @@ ActiveAdmin.register Concert do
     column "Pris", :price do |concert|
        concert.price
     end
+    
     column "Bilde", :photo do |concert|
       image_tag concert.photo.url(:thumb)
     end

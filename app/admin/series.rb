@@ -11,7 +11,7 @@ ActiveAdmin.register Serie do
     column "Navn", :name do |serie|
       link_to serie.name, edit_admin_series_path(serie)
     end
-    column "Opprettet", :created_at, :sortable => :created_at do |concert|
+    column "Opprettet", :created_at, :sortable => :created_at do |serie|
       (time_ago_in_words serie.created_at) + " siden"
     end
     column "Bilde", :photo do |serie|

@@ -19,7 +19,7 @@ class Concert < ActiveRecord::Base
   belongs_to :serie
   belongs_to :venue
 
-  validates_attachment :photo, :presence => true
+#  validates_attachment :photo, :presence => true
   validates :title, presence: true
   validates :desc, presence: true
   validates :show_date, presence: true

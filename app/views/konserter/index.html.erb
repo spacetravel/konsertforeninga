@@ -8,9 +8,10 @@
 			<td><%= link_to konsert.title, '/konserter/'+konsert.id.to_s %></td>
 	 		<td><%= konsert.price %> kr</b></td>
 	 		<td><%= konsert.show_time %></b></td>
-	 		<td></b></td>
+	 		<td> </td>
 		</tr>
-	<% end %>	
+	<% end %>
+
 	</table>
 	<%= link_to "Se tidligere konserter", '/tidligere_konserter/' %>
 </div>

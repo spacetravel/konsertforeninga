@@ -1,19 +1,29 @@
 nb:
   devise:
-      login:
-          title:
-              "Logg inn"
-          submit:
-             "Logg inn"
-      failure:
-          admin_user:
-              unauthenticated:
-                  "Innloggin"
       sessions:
           admin_user:
-              signed_in: 
+              signed_in:
                   "Logget inn"
+      failure:
+          admin_user:
+              invalid:
+                  "Feil i epost / password"
   active_admin:
+      devise:
+          login:
+              title:
+                  "Logg inn"
+              submit:
+                 "Logg inn"
+          failure:
+              admin_user:
+                  unauthenticated:
+                      "Innloggin"
+          sessions:
+              admin_user:
+                  signed_in: 
+                      "Logget inn"
+
       pagination:
           empty:
               "Ingen treff"
