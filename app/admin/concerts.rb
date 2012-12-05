@@ -7,7 +7,6 @@ ActiveAdmin.register Concert do
      
   menu :label => "Konserter", :priority => 11
   
-  config.per_page = 20
   config.comments = false
 
   index do
