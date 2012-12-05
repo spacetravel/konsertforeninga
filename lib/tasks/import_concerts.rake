@@ -25,8 +25,6 @@ namespace :kf do
             serie_id = 1
           when "FemmeBrutal"
             serie_id = 2
-          when "Blårollinger"
-            serie_id = 3
           when "Death Jazz"
             serie_id = 4
           when "Ukentlig"
