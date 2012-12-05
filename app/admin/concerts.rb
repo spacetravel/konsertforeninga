@@ -4,10 +4,10 @@ ActiveAdmin.register Concert do
   
   filter :title
   filter :desc 
-     
+  
   menu :label => "Konserter", :priority => 11
   
-  config.per_page = 300
+  config.sort_order = 'show_date_desc'
   config.comments = false
 
   index do
