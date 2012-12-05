@@ -1,11 +1,11 @@
 <div class="container">
 		<table class="table">
 			<tr>
-				<td><h2><%= l(@konsert.show_date,:format => '%d. %B') %> | <%= @konsert.serie.name %></h2><h1><%= @konsert.title %></h1></td>
+				<td><h2><%= l(@konsert.show_date,:format => '%d. %B') %> | <%= @konsert.serie.name %> | <%= link_to @konsert.venue.name, @konsert.venue.link %></h2><h1><%= @konsert.title %></h1></td>
 			</tr><tr>
  	    		<td><%= image_tag @konsert.photo.url(:large) %></td>
 			</tr><tr>
- 				<td><b><%= @konsert.show_time %> | <%= @konsert.price %> kr</b> | <a rel="nofollow" href="http://www.facebook.com/share.php?u=<%= request.url %>" class="fb_share_button" onclick="return fbs_click()" target="_blank" style="text-decoration:none;">Del på Facebook</a> 
+ 				<td><b><%= @konsert.show_time %> | <%= @konsert.price %></b> | <a rel="nofollow" href="http://www.facebook.com/share.php?u=<%= request.url %>" class="fb_share_button" onclick="return fbs_click()" target="_blank" style="text-decoration:none;">Del på Facebook</a> 
 			</tr><tr>
 				<td><%= @konsert.desc.html_safe %></td>
 			</tr>
