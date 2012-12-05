@@ -8,7 +8,7 @@
 			<td><%= link_to konsert.title, '/konserter/'+konsert.id.to_s %></td>
 	 		<td><%= konsert.price %></b></td>
 	 		<td><%= konsert.show_time %></b></td>
-	 		<td> <%= link_to @konsert.venue.name, @konsert.venue.link %> </td>
+	 		<td> <%= link_to konsert.venue.name, konsert.venue.link %> </td>
 		</tr>
 	<% end %>
 
