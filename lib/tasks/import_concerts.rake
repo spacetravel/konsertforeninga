@@ -1,3 +1,4 @@
+# encoding: utf-8
 namespace :kf do
   task :import_concerts => :environment do
 

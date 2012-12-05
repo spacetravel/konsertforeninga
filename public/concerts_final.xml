@@ -1,6 +1,5 @@
-
 <?xml version="1.0" encoding="UTF-8"?>
-<concerts type="array">
+<concerts>
   <concert>
     <created-at type="datetime">2012-12-05T02:04:46Z</created-at>
     <desc>&lt;p&gt;Blowout vs. Gutvik Ukentlig:&lt;br /&gt; Fire! m/ Oren Ambarchi&lt;br /&gt; Ketil Gutvik / Rolf Erik Nystr&amp;oslash;m / Phil Durrant&lt;/p&gt;
