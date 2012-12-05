@@ -6,15 +6,22 @@ nb:
                   "Logget inn"
       failure:
           admin_user:
+              unauthenticated:
+                  " "
               invalid:
                   "Feil i epost / password"
   active_admin:
       devise:
+          links:
+              forgot_your_password:
+                  " "
           login:
               title:
-                  "Logg inn"
+                  "Innlogging"
               submit:
                  "Logg inn"
+              remember_me:
+                  "Husk meg"
           failure:
               admin_user:
                   unauthenticated:
