@@ -1,6 +1,6 @@
 class KonserterController < ApplicationController
   def index
-    @konserter = Concert.where("show_date > ?", Time.now).order('show_date ASC')
+    @konserter = Concert.where("show_date >= ?", Time.now).order('show_date ASC')
   end
 
   def old
