@@ -25,7 +25,7 @@ nb:
           failure:
               admin_user:
                   unauthenticated:
-                      "Innloggin"
+                      "Innlogging"
           sessions:
               admin_user:
                   signed_in: 

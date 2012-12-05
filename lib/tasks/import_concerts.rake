@@ -25,14 +25,18 @@ namespace :kf do
             serie_id = 1
           when "FemmeBrutal"
             serie_id = 2
+          when "Blårollinger"
+            serie_id = 3
           when "Death Jazz"
             serie_id = 4
-          when "chk"
-            serie_id = 5
           when "Ukentlig"
+            serie_id = 5
+          when "Impro på Taxi"
             serie_id = 6
+          when "chk"
+            serie_id = 7
           else 
-            serie_id = 3
+            serie_id = 8
         end
         
         case scene
@@ -40,14 +44,18 @@ namespace :kf do
             scene_id = 1
           when "Mono"
             scene_id = 2
-          when "Taxi Take Away"
-            scene_id = 6
           when "Parkteateret"
             scene_id = 3
           when "Blitz"
             scene_id = 4  
+          when "Tamara"
+            scene_id = 5
+          when "Taxi Take Away"
+            scene_id = 6
+          when "Stein og Jord Platebar"
+            scene_id = 7
           else
-            scene_id = 5  
+            scene_id = 8
         end
         
 #        regex_date = /\d{1,2}\.\d{1,2}\.\d{4}/
