@@ -10,7 +10,7 @@
 #
 
 class Serie < ActiveRecord::Base
-  attr_accessible :name, :desc, :photo
+  attr_accessible :name, :desc, :photo, :photo_file_name, :photo_content_type, :photo_file_size
   
   has_many :concerts
   has_many :news_bulletins
