@@ -29,8 +29,6 @@ namespace :kf do
             serie_id = 4
           when "Ukentlig"
             serie_id = 5
-          when "Impro på Taxi"
-            serie_id = 6
           when "chk"
             serie_id = 7
           else 
