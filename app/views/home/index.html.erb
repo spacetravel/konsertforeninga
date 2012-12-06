@@ -4,11 +4,11 @@
 			<tbody>
 				<tr>
 					<td class="span5" style="vertical-align:top;width:300px">
-						<h4><b><%= @first_concert.serie.name %></b></h4><h3><%= link_to truncate(@first_concert.title, length: 25), '/konserter/'+@first_concert.id.to_s %></h3>
+						<h4><b><%= link_to @first_concert.serie.name, '/konsertserier/'+@first_concert.serie.id.to_s %></b></h4><h3><%= link_to truncate(@first_concert.title, length: 25), '/konserter/'+@first_concert.id.to_s %></h3>
 					</td>
 					<td class="span2"></td>								
 					<td class="span5" style="vertical-align:top;width:300px">
-						<h4><b><%= @second_concert.serie.name %></b></h4><h3><%= link_to truncate(@second_concert.title, length: 25), '/konserter/'+@second_concert.id.to_s %></h3>
+						<h4><b><%= link_to @second_concert.serie.name, '/konsertserier/'+ @second_concert.serie.id.to_s %></b></h4><h3><%= link_to truncate(@second_concert.title, length: 25), '/konserter/'+@second_concert.id.to_s %></h3>
 					</td>
 				</tr>
 				<tr>

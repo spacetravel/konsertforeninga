@@ -1,7 +1,7 @@
 <div class="container">
 		<table class="table">
 			<tr>
-				<td><h2><%= @konsert.serie.name %> | <%= l(@konsert.show_date,:format => '%d. %B %Y') %> | <%= link_to @konsert.venue.name, @konsert.venue.link %></h2><h1><%= @konsert.title %></h1></td>
+				<td><h2><%= link_to @konsert.serie.name,'/konsertserier/'+@konsert.serie.id.to_s %> | <%= l(@konsert.show_date,:format => '%d. %B %Y') %> | <%= link_to @konsert.venue.name, @konsert.venue.link %></h2><h1><%= @konsert.title %></h1></td>
 			</tr><tr>
  	    		<td><%= image_tag @konsert.photo.url(:large) %></td>
 			</tr><tr>
