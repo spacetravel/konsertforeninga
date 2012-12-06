@@ -1,20 +1,64 @@
 <div class="container">
-		<div class="span9">
-	<table class="table">
-		<thead>
-			<tr>
-				<th><h3>Nyheter</h3></th>
-			</tr>
-		</thead>
-	<% @news.take(4).each do |nyhet| %>
-		<tbody>
-			<tr>
-				<td><%= nyhet.serie.name %> </td><td> <%= link_to nyhet.title, '/nyheter/'+nyhet.id.to_s %></td>
-			</tr>
-		</tbody>
-	<% end %>
-	</table>
-</div>
+	<div class="span9">
+		<table style="text-align:center">
+			<tbody>
+				<tr>
+					<td>
+						<table class="span5">
+							<tr>
+								<td>
+									<h3><b><%= @first_concert.serie.name %></b><br /><%= link_to @first_concert.title, '/konserter/'+@first_concert.id.to_s %></h3>
+								</td>
+							</tr>
+							<tr>
+								<td>
+								<%= image_tag @first_concert.photo.url(:medium) %>
+								</td>
+							</tr>
+						</table>
+					</td>
+					<td style="vertical-align:top"><table class="span4" >
+							<tr>
+								<td><h3><b><%= @second_concert.serie.name %></b><br /><%= link_to @second_concert.title, '/konserter/'+@second_concert.id.to_s %></h3>
+								</td>
+							</tr>
+							<tr>
+								<td>
+								<%= image_tag @second_concert.photo.url(:medium) %>
+								</td>
+							</tr>
+						</table>
+					</td>	
+				</tr>
+				<tr>
+					<td style="vertical-align:bottom">
+					<%= l(@first_concert.show_date, :format => '%d. %b') %> | <%=  @first_concert.venue.name %> | <%= @first_concert.show_time %> 
+					</td>
+					
+					<td  style="vertical-align:bottom">
+					<%= l(@second_concert.show_date, :format => '%d. %b') %> | <%=  @second_concert.venue.name %> | <%= @second_concert.show_time %>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+
+	<div class="span9">
+		<table class="table">
+			<thead>
+				<tr>
+					<th class="span9" style="text-align:center"><h3>Nyheter</h3></th>
+				</tr>
+			</thead>
+		<% @news.take(4).each do |nyhet| %>
+			<tbody>
+				<tr>
+					<td><%= nyhet.serie.name %> </td><td> <%= link_to nyhet.title, '/nyheter/'+nyhet.id.to_s %></td>
+				</tr>
+			</tbody>
+		<% end %>
+		</table>
+	</div>
 
 	<div class="span9">
 	 	Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanitatis per seacula quarta decima et quinta decima. Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in futurum.
