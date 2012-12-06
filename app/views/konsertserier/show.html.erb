@@ -9,7 +9,25 @@
 <br /><br />
 <div class="container">
 	<table class="table">
-	<% @konserter.each do |konsert| %>
+	<% @konserter_future.each do |konsert| %>
+	<tr>
+ 	    <td><%= konsert.serie.name %> <br /><%= l(konsert.show_date,:format => '%d. %B %Y') %></td>
+ 	    <td style="min-width:100px"><%= link_to image_tag(konsert.photo.url(:thumb)),'/konserter/'+konsert.id.to_s %></td>
+		<td><%= link_to konsert.title, '/konserter/'+konsert.id.to_s %></td>
+ 		<td><%= konsert.price %></b></td>
+ 		<td><%= konsert.show_time %></b></td>
+	</tr>
+	<% end %>	
+	</table>
+</div>
+
+
+<br /><br /><br />
+
+<div class="container">
+	<h3>Tidligere konserter</h3>
+	<table class="table">
+	<% @konserter_past.each do |konsert| %>
 	<tr>
  	    <td><%= konsert.serie.name %> <br /><%= l(konsert.show_date,:format => '%d. %B %Y') %></td>
  	    <td style="min-width:100px"><%= link_to image_tag(konsert.photo.url(:thumb)),'/konserter/'+konsert.id.to_s %></td>
