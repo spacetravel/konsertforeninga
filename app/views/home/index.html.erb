@@ -1,41 +1,32 @@
 <div class="container">
 	<div class="span9">
-		<table style="text-align:center">
+		<table style="text-align:center;vertical-align:top">
 			<tbody>
 				<tr>
-					<td>
-						<table class="span5">
-							<tr>
-								<td>
-									<h3><b><%= @first_concert.serie.name %></b><br /><%= link_to @first_concert.title, '/konserter/'+@first_concert.id.to_s %></h3>
-								</td>
-							</tr>
-							<tr>
-								<td>
-								<%= image_tag @first_concert.photo.url(:medium) %>
-								</td>
-							</tr>
-						</table>
+					<td class="span5" style="vertical-align:top;width:300px">
+						<h4><b><%= @first_concert.serie.name %></b></h4><h3><%= link_to truncate(@first_concert.title, length: 25), '/konserter/'+@first_concert.id.to_s %></h3>
 					</td>
-					<td style="vertical-align:top"><table class="span4" >
-							<tr>
-								<td><h3><b><%= @second_concert.serie.name %></b><br /><%= link_to @second_concert.title, '/konserter/'+@second_concert.id.to_s %></h3>
-								</td>
-							</tr>
-							<tr>
-								<td>
-								<%= image_tag @second_concert.photo.url(:medium) %>
-								</td>
-							</tr>
-						</table>
-					</td>	
+					<td class="span2"></td>								
+					<td class="span5" style="vertical-align:top;width:300px">
+						<h4><b><%= @second_concert.serie.name %></b></h4><h3><%= link_to truncate(@second_concert.title, length: 25), '/konserter/'+@second_concert.id.to_s %></h3>
+					</td>
 				</tr>
 				<tr>
-					<td style="vertical-align:bottom">
+					<td  style="vertical-align:top;background-color:#111111">
+						<%= link_to image_tag(@first_concert.photo.url(:medium)), '/konserter/' + @first_concert.id.to_s %>
+					</td>
+					<td class="span1"></td>
+					<td style="vertical-align:top;background-color:#111111">
+						<%= link_to image_tag(@second_concert.photo.url(:medium)), '/konserter/'+ @second_concert.id.to_s %>
+					</td>
+				</tr>
+				<tr>
+					<td style="vertical-align:top">
 					<%= l(@first_concert.show_date, :format => '%d. %b') %> | <%=  @first_concert.venue.name %> | <%= @first_concert.show_time %> 
 					</td>
+					<td class="span1"></td>
 					
-					<td  style="vertical-align:bottom">
+					<td style="vertical-align:top">
 					<%= l(@second_concert.show_date, :format => '%d. %b') %> | <%=  @second_concert.venue.name %> | <%= @second_concert.show_time %>
 					</td>
 				</tr>
