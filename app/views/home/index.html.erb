@@ -53,7 +53,7 @@
 		<% @news.take(4).each do |nyhet| %>
 			<tbody>
 				<tr>
-					<td><%= nyhet.serie.name %> </td><td> <%= link_to nyhet.title, '/nyheter/'+nyhet.id.to_s %></td>
+					<td class="span5"><%= nyhet.serie.name %> </td><td> <%= link_to nyhet.title, '/nyheter/'+nyhet.id.to_s %></td>
 				</tr>
 			</tbody>
 		<% end %>
