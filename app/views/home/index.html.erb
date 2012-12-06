@@ -3,11 +3,11 @@
 		<table style="text-align:center;vertical-align:top">
 			<tbody>
 				<tr>
-					<td class="span5" style="vertical-align:top;width:300px">
+					<td class="span4" style="vertical-align:top;width:300px">
 						<h4><b><%= link_to @first_concert.serie.name, '/konsertserier/'+@first_concert.serie.id.to_s %></b></h4><h3><%= link_to truncate(@first_concert.title, length: 25), '/konserter/'+@first_concert.id.to_s %></h3>
 					</td>
-					<td class="span2"></td>								
-					<td class="span5" style="vertical-align:top;width:300px">
+					<td class="span1"></td>								
+					<td class="span4" style="vertical-align:top;width:300px">
 						<h4><b><%= link_to @second_concert.serie.name, '/konsertserier/'+ @second_concert.serie.id.to_s %></b></h4><h3><%= link_to truncate(@second_concert.title, length: 25), '/konserter/'+@second_concert.id.to_s %></h3>
 					</td>
 				</tr>
@@ -38,13 +38,13 @@
 		<table class="table">
 			<thead>
 				<tr>
-					<th class="span9" style="text-align:center"><h3>Nyheter</h3></th>
+					<th><h3>Nyheter</h3></th>
 				</tr>
 			</thead>
 		<% @news.take(4).each do |nyhet| %>
 			<tbody>
 				<tr>
-					<td class="span5"><%= nyhet.serie.name %> </td><td> <%= link_to nyhet.title, '/nyheter/'+nyhet.id.to_s %></td>
+					<td class="span3"><%= nyhet.serie.name %> </td><td> <%= link_to nyhet.title, '/nyheter/'+nyhet.id.to_s %></td>
 				</tr>
 			</tbody>
 		<% end %>
