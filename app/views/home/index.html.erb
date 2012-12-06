@@ -59,7 +59,7 @@
 	<% @series.each do |serie| %>
 		<% unless serie.concerts.where("show_date >= ?", Time.now).empty? %>
 		<div class="span4" style="min-height:230px; padding:auto">
-			<div style="min-height:100px"><%= link_to image_tag(serie.photo.url(:medium)), '/konsertserier/'+serie.id %><br /></div>
+			<div style="min-height:100px"><%= link_to image_tag(serie.photo.url(:medium)), '/konsertserier/'+serie.id.to_s %><br /></div>
 				<table class="table table-condensed">
 					<% serie.concerts.where("show_date > ?", Time.now).order('show_date ASC').take(4).each do |concert| %>
 						<tr><td><%= link_to truncate(concert.title, :length => 30), '/konserter/'+concert.id.to_s %></td><td><%= l(concert.show_date, :format => '%d. %b') %></td></tr>
