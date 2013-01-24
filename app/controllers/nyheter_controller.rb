@@ -1,7 +1,8 @@
 class NyheterController < ApplicationController
 
   def index
-    @news = NewsBulletin.all
+    @news = NewsBulletin.order('created_at ASC')
+
   end
   
   def show
