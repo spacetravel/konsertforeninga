@@ -11,3 +11,7 @@
  *= require_self
  *= require_tree .
  */
+
+.style_image {
+	border: 1px solid #000;
+}
