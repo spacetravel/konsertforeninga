@@ -1,5 +1,5 @@
 <div class="container">
-	<div id="carousel-container">gffhhdshssdfhdhshdfhsdhsdh<br /></div>
+	<div class="carousel-container">gffhhdshssdfhdhshdfhsdhsdh<br /></div>
 	<% unless @first_concert.nil? or @second_concert.nil? %>
 	<div class="span9">
 		<table style="text-align:center;vertical-align:top">
@@ -71,7 +71,7 @@
 </div>
 <script type="text/javascript">
 	$(document).ready(function() {
-		$('#carousel-container').text("http://konsertforeninga.herokuapp.com/konsertkarusell/");	
+		$('div.carousel-container').text('http://konsertforeninga.herokuapp.com/konsertkarusell/');	
 //		$('#carousel-container').carousel("http://konsertforeninga.herokuapp.com/konsertkarusell/", 'horizontal');	
 	})
 </script>
