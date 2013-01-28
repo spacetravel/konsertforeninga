@@ -17,8 +17,8 @@ def karusell
     format.json { render :json => {
          :caption => "test",
          :id => 3,
-         :preview_url => "/konsertforeninga1.jpg",
-         :url => '/konserter/1'
+         :preview_url => "http://konsertforeninga.herokuapp.com/assets/konsertforeninga1-04ceb60bf55e9c5ced056216c1e23750.jpg",
+         :url => 'http://konsertforeninga.herokuapp.com/konserter/1'
 
         } 
     }
