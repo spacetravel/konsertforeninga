@@ -10,7 +10,9 @@
 	 $(window).load(function(){
 		 // invoke the carousel
 		$('#konsertkarusell').carousel({
-		  interval: 6000
+		  interval: 6000,
+		  loop: true,
+		  pause: "hover"
 		});
 	 	$('#konsertkarusell').carousel('cycle');
 	 });	
