@@ -2,7 +2,6 @@ class HomeController < ApplicationController
 
   def index
     @series = Serie.all
-    @news = NewsBulletin.order('created_at DESC')
     
     @first_concert = Concert.where('show_date >= ?', Time.now).order('show_Date ASC').first
 
@@ -24,6 +23,8 @@ class HomeController < ApplicationController
   end
   
   def about
+        @news = NewsBulletin.order('created_at DESC')
+
   end
   
 end
