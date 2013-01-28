@@ -15,14 +15,12 @@ class HomeController < ApplicationController
     format.json { render :json => {
          :caption => @concerts.collect(&:title),
          :id => @concerts.collect(&:id),
-          :image => 
+         :preview_url => @concerts.collect(&:image),
+         :url => '/konserter/'+@concerts.collect(&:id),
+
         } 
     }
-
-  render :json => {
-  :query => 'e',
-  :suggestions => @customers.collect(&:name),
-  :data => @customers.collect(&:id)
+ 
 }
   end
 end
