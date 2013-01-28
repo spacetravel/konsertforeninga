@@ -7,7 +7,7 @@ class HomeController < ApplicationController
 
     @second_concert = Concert.where('show_date >= ?', Time.now).order('show_date ASC').second
   
-    @concerts = Concert.where('show_date >= ?', Time.now).order('show_date ASC')
+    @concerts = Concert.where('show_date >= ?', Time.now).order('show_date ASC').take(5)
 end
   
   def nyhet
