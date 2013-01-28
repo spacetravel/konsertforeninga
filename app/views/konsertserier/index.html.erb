@@ -1,9 +1,9 @@
 <div class="container">
 	<h1>Konsertserier</h1><br />
-		<table class="tavle span9">
+		<table class="tavle">
 			<tbody>
 				<% @series.each do |serie| %>
-			<td>
+			<td class="span5">
 				<div><h2><%= link_to serie.name, '/konsertserier/'+serie.id.to_s %></h2></div>
 				<div class="seriedesc"><%= serie.desc %></div>
 			</td>
