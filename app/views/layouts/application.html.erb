@@ -6,6 +6,16 @@
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
   <link rel="shortcut icon" href="/assets/kf-icon.gif"/>
+  <script type="text/javascript">
+	$(document).ready(function() {
+		 // invoke the carousel
+		$('#konsertkarusell').carousel({
+		  interval: 6000
+		});
+	 	$('#konsertkarusell').carousel('cycle');
+	 });	
+
+</script>
 </head>
 <body>
 <div class="innhold">
@@ -34,13 +44,6 @@
 <footer style="width:100%;text-align:center;color:white;background-color:#000000">Konsertforeninga © 2012 <a href="mailto:booking@konsertforeninga.no" style="color:white">Kontakt oss</a> 
 </footer>
 
-<script type="text/javascript">
-	// invoke the carousel
-$('#konsertkarusell').carousel({
-  interval: 6000
-});
- $('#konsertkarusell').carousel('cycle');
 
-</script>
 </body>
 </html>
