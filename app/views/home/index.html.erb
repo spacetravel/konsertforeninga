@@ -23,7 +23,7 @@
 	  	<% end %>
     	<% end %>
 	</div>
-		<div class="span7" style="margin-left:75px;">
+		<div class="span9">
 		<table class="table">
 			<thead>
 				<tr><td><h3>siste fra foreninga</h3></td></tr>
@@ -31,7 +31,7 @@
 		<% @news.take(4).each do |nyhet| %>
 			<tbody>
 				<tr>
-					<td class="span3"><%= nyhet.serie.name %> </td><td> <%= link_to nyhet.title, '/nyheter/'+nyhet.id.to_s %></td>
+					<td class="span2"><%= nyhet.serie.name %> </td><td> <%= link_to nyhet.title, '/nyheter/'+nyhet.id.to_s %></td>
 				</tr>
 			</tbody>
 		<% end %>
