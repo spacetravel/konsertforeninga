@@ -12,7 +12,18 @@ class HomeController < ApplicationController
   respond_to do |format|
     format.html # index.html.erb
     format.xml  { render :xml => @concerts }
-    format.json { render :json => @concerts }
+    format.json { render :json => {
+         :caption => @concerts.collect(&:title),
+         :id => @concerts.collect(&:id),
+          :image => 
+        } 
+    }
+
+  render :json => {
+  :query => 'e',
+  :suggestions => @customers.collect(&:name),
+  :data => @customers.collect(&:id)
+}
   end
 end
   
