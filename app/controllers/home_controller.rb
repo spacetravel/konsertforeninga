@@ -3,21 +3,18 @@ class HomeController < ApplicationController
   def index
     @series = Serie.all
     
-    @first_concert = Concert.where('show_date >= ?', Time.now).order('show_Date ASC').first
+    @first_concert = Concert.where('show_date >= ?', Time.now).order('show_date ASC').first
 
-    @second_concert = Concert.where('show_date >= ?', Time.now).order('show_Date ASC').second
+    @second_concert = Concert.where('show_date >= ?', Time.now).order('show_date ASC').second
   
 end
   
 def karusell
  
-  @concerts = Concert.where('show_date >= ?', Time.now).order('show_Date ASC')
+  @concerts = Concert.where('show_date >= ?', Time.now).order('show_date ASC')
 
   respond_to do |format|
-    format.html # index.html.erb
-    format.xml  { render :xml => @concerts }
-    format.json { render :json => @concerts
-    }
+    format.json { render :json => @concerts }
  
   end
 end
