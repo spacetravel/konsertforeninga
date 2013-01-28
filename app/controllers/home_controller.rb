@@ -16,7 +16,7 @@ def karusell
   respond_to do |format|
     format.json { render :json => {
          :caption => "test",
-         :id => 3,
+         :id => "3",
          :preview_url => "http://s3-eu-west-1.amazonaws.com/konsertforeninga/system/concerts/187/large/knedal.jpg",
          :url => "http://konsertforeninga.herokuapp.com/konserter/1"
 
