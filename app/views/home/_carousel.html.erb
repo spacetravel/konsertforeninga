@@ -7,7 +7,7 @@
       <a href="<%= link_to '/konserter/'+ @concerts.first.id.to_s %>">
       <img style="margin:0px auto;" src="<%= @concerts.first.photo.url(:large) %>" alt="" /></a>
       <div class="carousel-caption">
-        <p> <%= link_to truncate(@concerts.first.title, length: 25), '/konserter/'+@concerts.first.id.to_s  %></p>
+        <p style="color:white"> <%= link_to truncate(@concerts.first.title, length: 25), '/konserter/'+@concerts.first.id.to_s  %></p>
       </div>
     </div>
 <% @concerts.each do |concert| %>
@@ -15,7 +15,7 @@
        <a href="<%= link_to '/konserter/'+ concert.id.to_s %>">
        <img style="margin:0px auto;" src="<%= concert.photo.url(:large) %>" alt="" />
      </a>
-      <div class="carousel-caption">
+      <div style="color:white" class="carousel-caption">
         <p><%= link_to truncate(concert.title, length: 25), '/konserter/'+concert.id.to_s %></p>
       </div>
     </div>

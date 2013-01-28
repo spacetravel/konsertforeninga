@@ -1,55 +1,8 @@
 <div class="container">
+	<% unless @concerts.first.nil? %>
+	
 	<div class="span9">
 		<%= render 'carousel', :object => @concerts %>
-	</div>
-	<% unless @first_concert.nil? or @second_concert.nil? %>
-	<div class="span9">
-		<table style="text-align:center;vertical-align:top">
-			<tbody>
-				<tr>
-					<td class="span4" style="vertical-align:top;width:300px">
-					<% unless @first_concert.nil? %>
-						<h4><b><%= link_to @first_concert.serie.name, '/konsertserier/'+@first_concert.serie.id.to_s %></b></h4><h3><%= link_to truncate(@first_concert.title, length: 25), '/konserter/'+@first_concert.id.to_s %></h3>
-					<% end %>
-					</td>
-				
-					<td class="span1"></td>								
-					<td class="span4" style="vertical-align:top;width:300px">
-					<% unless @second_concert.nil? %>
-						<h4><b><%= link_to @second_concert.serie.name, '/konsertserier/'+ @second_concert.serie.id.to_s %></b></h4><h3><%= link_to truncate(@second_concert.title, length: 25), '/konserter/'+@second_concert.id.to_s %></h3>
-					<% end %>
-					</td>
-				</tr>
-				<tr>
-					<td  style="vertical-align:top;background-color:#111111">
-					<% unless @first_concert.nil? %>
-						<%= link_to image_tag(@first_concert.photo.url(:medium)), '/konserter/' + @first_concert.id.to_s %>
-					<% end %>
-					</td>
-					<td class="span1"></td>
-					<% unless @second_concert.nil? %>
-					<td style="vertical-align:top;background-color:#111111">
-						<%= link_to image_tag(@second_concert.photo.url(:medium)), '/konserter/'+ @second_concert.id.to_s %>
-						<% end %>
-					</td>
-				</tr>
-				<tr>
-					<td style="vertical-align:top">
-					<% unless @first_concert.nil? %>
-						
-					<%= l(@first_concert.show_date, :format => '%d. %b') %> | <%=  @first_concert.venue.name %> 
-					<% end %>
-					</td>
-					<td class="span1"></td>
-					
-					<td style="vertical-align:top">
-						<% unless @second_concert.nil? %>
-					<%= l(@second_concert.show_date, :format => '%d. %b') %> | <%=  @second_concert.venue.name %>
-					<% end %>
-					</td>
-				</tr>
-			</tbody>
-		</table>
 	</div>
 	<% end %>
 
@@ -60,7 +13,7 @@
 	<% @series.each do |serie| %>
 		<% unless serie.concerts.where("show_date >= ?", Time.now).empty? %>
 		<div class="span4" style="min-height:230px; padding:auto">
-			<%= link_to image_tag(serie.photo.url(:medium)), '/konsertserier/'+serie.id.to_s %><br />
+			<%= link_to image_tag(serie.photo.url(:medium)), '/konsertserier/'+serie.id.to_s %><br /><br />
 				<table class="table table-condensed" >
 					<% serie.concerts.where("show_date > ?", Time.now).order('show_date ASC').take(4).each do |concert| %>
 						<tr><td><%= link_to truncate(concert.title, :length => 30), '/konserter/'+concert.id.to_s %></td><td><%= l(concert.show_date, :format => '%d. %b') %></td></tr>
