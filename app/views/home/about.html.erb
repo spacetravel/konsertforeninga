@@ -13,7 +13,11 @@
 <br /><br />
 	<div class="span12">
 		<table class="table">
-			
+			<thead>
+				<tr>
+					<th><h3>Medlinger fra Konsertforeninga</h3></th>
+				</tr>
+			</thead>
 		<% @news.take(4).each do |nyhet| %>
 			<tbody>
 				<tr>
@@ -23,7 +27,7 @@
 		<% end %>
 		</table>
 	</div>
-
+	<br /><br /><br />
 	Kontakt oss på :<br />
 
 	booking@konsertforeninga.no<br />
