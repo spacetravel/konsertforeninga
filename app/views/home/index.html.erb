@@ -23,15 +23,15 @@
 	  	<% end %>
     	<% end %>
 	</div>
-		<div class="span8">
+		<div class="span8" style="margin-left:30px">
 			
-			<h3>Siste fra Konsertforeninga</h3>
+			<h3>Siste nytt fra Konsertforeninga</h3>
 		
 		<table class="table">
 		<% @news.take(4).each do |nyhet| %>
 			<tbody>
 				<tr>
-					<td class="span3"><%= nyhet.serie.name %> </td><td> <%= link_to nyhet.title, '/nyheter/'+nyhet.id.to_s %></td>
+					<td><%= nyhet.serie.name %> </td><td> <%= link_to nyhet.title, '/nyheter/'+nyhet.id.to_s %></td>
 				</tr>
 			</tbody>
 		<% end %>
