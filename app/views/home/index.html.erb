@@ -1,5 +1,7 @@
 <div class="container">
-	<%= render 'carousel' %>
+	<div class="span9">
+		<%= render 'carousel', :object => @concerts %>
+	</div>
 	<% unless @first_concert.nil? or @second_concert.nil? %>
 	<div class="span9">
 		<table style="text-align:center;vertical-align:top">

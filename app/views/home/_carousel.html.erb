@@ -1,34 +1,27 @@
 <!--  Carousel - consult the Twitter Bootstrap docs at
       http://twitter.github.com/bootstrap/javascript.html#carousel -->
+
 <div id="this-carousel-id" class="carousel slide"><!-- class of slide for animation -->
-  <div class="carousel-inner">
-    <div class="item active"><!-- class of active since it's the first item -->
-      <img src="http://placehold.it/1200x480" alt="" />
+  <div class="carousel-inner" >
+    <div class="item active" ><!-- class of active since it's the first item -->
+      <img style="margin:0px auto;" src="<%= @concerts.first.photo.url(:large) %>" alt="" />
       <div class="carousel-caption">
-        <p>Caption text here</p>
+        <p> <%= link_to truncate(@concerts.first.title, length: 25), '/konserter/'+@concerts.first.id.to_s  %></p>
       </div>
     </div>
-    <div class="item">
-      <img src="http://placehold.it/1200x480" alt="" />
+<% @concerts.each do |concert| %>
+    <div class="item" ><!-- class of active since it's the first item -->
+      <img style="margin:0px auto;" src="<%= concert.photo.url(:large) %>" alt="" />
       <div class="carousel-caption">
-        <p>Caption text here</p>
+        <p><%= link_to truncate(concert.title, length: 25), '/konserter/'+concert.id.to_s %></p>
       </div>
     </div>
-    <div class="item">
-      <img src="http://placehold.it/1200x480" alt="" />
-      <div class="carousel-caption">
-        <p>Caption text here</p>
-      </div>
-    </div>
-    <div class="item">
-      <img src="http://placehold.it/1200x480" alt="" />
-      <div class="carousel-caption">
-        <p>Caption text here</p>
-      </div>
-    </div>
+<% end %>
+
   </div><!-- /.carousel-inner -->
   <!--  Next and Previous controls below
         href values must reference the id for this carousel -->
     <a class="carousel-control left" href="#this-carousel-id" data-slide="prev">&lsaquo;</a>
     <a class="carousel-control right" href="#this-carousel-id" data-slide="next">&rsaquo;</a>
 </div><!-- /.carousel -->
+

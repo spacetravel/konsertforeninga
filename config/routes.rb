@@ -13,7 +13,6 @@ Konsertforeninga::Application.routes.draw do
   match "/konsertserier" => "konsertserier#index"
   match "/konsertserier/:id/" => "konsertserier#show"
   match "/konserter" => "konserter#index"
-  match "/konsertkarusell" => "home#karusell"
   match "/konserter/:id" => "konserter#show"
   match "/tidligere_konserter/" => "konserter#old"
 

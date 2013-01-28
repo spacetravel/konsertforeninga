@@ -18,9 +18,6 @@
 
 $(document).ready(function() {
 
-	alert("test");
-	//$('.carousel').carousel();
-
 	tinyMCE.init({
 	  mode: 'textareas',
 	  theme: 'advanced'
