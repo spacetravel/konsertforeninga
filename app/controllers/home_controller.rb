@@ -15,10 +15,10 @@ def karusell
 
   respond_to do |format|
     format.json { render :json => {
-         :caption => @concerts.collect(&:title),
-         :id => @concerts.collect(&:id),
-         :preview_url => @concerts.collect(&:image),
-         :url => '/konserter/'+@concerts.collect(&:id)
+         :caption => "test",
+         :id => 3,
+         :preview_url => "/konsertforeninga1.jpg",
+         :url => '/konserter/1'
 
         } 
     }
