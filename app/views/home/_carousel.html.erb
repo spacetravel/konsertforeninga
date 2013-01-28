@@ -13,7 +13,7 @@
 <% @concerts.each do |concert| %>
     <% unless concert.id == @concerts.first.id %>
     <div class="item" ><!-- class of active since it's the first item -->
-       <%= image_tag(concert.photo.url(:large),:style => "margin:0px auto;") %>
+       <%= image_tag(concert.photo.url(:large)) %>
       <div class="carousel-caption">
         <p><span style="font-size:18px"><%= concert.serie.name %>: <%= concert.title %></span><br />
               <%= l(concert.show_date,:format => '%d. %B %Y') %> | <%= concert.price %>
