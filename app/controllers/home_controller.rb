@@ -6,7 +6,15 @@ class HomeController < ApplicationController
     @first_concert = Concert.where('show_date >= ?', Time.now).order('show_Date ASC').first
 
     @second_concert = Concert.where('show_date >= ?', Time.now).order('show_Date ASC').second
+  
+    @concerts = Concert.where('show_date >= ?', Time.now).order('show_Date ASC')
+
+  respond_to do |format|
+    format.html # index.html.erb
+    format.xml  { render :xml => @concerts }
+    format.json { render :json => @concerts }
   end
+end
   
   def nyhet
     @nyhet = NewsBulletin.find(params[:id])
