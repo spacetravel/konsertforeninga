@@ -1,7 +1,7 @@
 <div class="container">
 	<% unless @concerts.first.nil? %>
 	
-	<div class="span7 offset1">
+	<div class="span7" style="margin-left:75px;">
 		<%= render 'carousel', :object => @concerts %>
 	</div>
 	<% end %>
