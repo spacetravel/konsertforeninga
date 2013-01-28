@@ -13,6 +13,7 @@
 
 //= require jquery
 //= require jquery_ujs
+//= require bootstrap_transition
 //= require bootstrap
 //= require_tree .
 
