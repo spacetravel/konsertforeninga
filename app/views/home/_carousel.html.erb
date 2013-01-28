@@ -1,9 +1,10 @@
 <!--  Carousel - consult the Twitter Bootstrap docs at
       http://twitter.github.com/bootstrap/javascript.html#carousel -->
 
-<div id="konsertkarusell" class="carousel "><!-- class of slide for animation -->
+<div id="konsertkarusell" class="carousel slide"><!-- class of slide for animation -->
   <div class="carousel-inner" >
     <div class="item active" ><!-- class of active since it's the first item -->
+      <%= image_tag(@concerts.first.photo.url(:large), :style => "margin:0px auto;") %>
       <div class="carousel-caption">
         <p><span style="font-size:18px"><%= @concerts.first.serie.name %>: <%= @concerts.first.title %></span><br />
               <%= l(@concerts.first.show_date,:format => '%d. %B %Y') %> | <%= @concerts.first.price %></p>
@@ -12,6 +13,7 @@
 <% @concerts.each do |concert| %>
     <% unless concert.id == @concerts.first.id %>
     <div class="item" ><!-- class of active since it's the first item -->
+       <%= image_tag(concert.photo.url(:large),:style => "margin:0px auto;") %>
       <div class="carousel-caption">
         <p><span style="font-size:18px"><%= concert.serie.name %>: <%= concert.title %></span><br />
               <%= l(concert.show_date,:format => '%d. %B %Y') %> | <%= concert.price %>
