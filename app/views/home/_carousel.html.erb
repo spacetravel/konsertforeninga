@@ -6,14 +6,16 @@
     <div class="item active" ><!-- class of active since it's the first item -->
       <%= link_to image_tag(@concerts.first.photo.url(:large), style: "margin:0px auto;"), '/konserter/'+ @concerts.first.id.to_s %>
       <div class="carousel-caption">
-        <p> <%= @concerts.first.series.name %>: <%= @concerts.first.title %></p>
+        <p><b><%= @concerts.first.series.name %>: <%= @concerts.first.title %></b><br />
+              <%= @concerts.first.show_time%> | | <%= @concerts.first.price %></p>
       </div>
     </div>
 <% @concerts.each do |concert| %>
     <div class="item" ><!-- class of active since it's the first item -->
        <%= link_to image_tag(concert.photo.url(:large), style: "margin:0px auto;"), '/konserter/'+ @concerts.first.id.to_s %>
       <div  class="carousel-caption">
-        <p><%= concert.series.name %>: <%= concert.title %></p>
+        <p><b><%= concert.series.name %>: <%= concert.title %></b><br />
+              <%= concert.show_time%> | | <%= consert.price %></p>
       </div>
     </div>
 <% end %>
