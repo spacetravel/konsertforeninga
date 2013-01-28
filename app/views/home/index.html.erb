@@ -12,7 +12,7 @@
 		<br /><br />
 	<% @series.each do |serie| %>
 		<% unless serie.concerts.where("show_date >= ?", Time.now).empty? %>
-		<div class="span4" style="min-height:230px; padding:auto">
+		<div class="span4" style=" padding:auto">
 			<%= link_to image_tag(serie.photo.url(:medium)), '/konsertserier/'+serie.id.to_s %><br /><br />
 				<table class="table table-condensed" >
 					<% serie.concerts.where("show_date > ?", Time.now).order('show_date ASC').take(4).each do |concert| %>
@@ -23,7 +23,7 @@
 	  	<% end %>
     	<% end %>
 	</div>
-	<hr style="color: #f00; background: #f00; width: 75%; height: 5px;">
+	<hr style="color: #000; background: #000; width: 75%; height: 5px;" />
 		<div class="span8" style="margin-left:40px">
 			
 			<h3>Siste nytt fra Konsertforeninga</h3>
