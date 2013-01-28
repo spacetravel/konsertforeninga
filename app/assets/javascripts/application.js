@@ -13,8 +13,6 @@
 
 //= require jquery
 //= require jquery_ujs
-//= require jquery.lightbox-0.5
-//= require carousel
 //= require_tree .
 
 
