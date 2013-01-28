@@ -14,7 +14,14 @@ def karusell
   @concerts = Concert.where('show_date >= ?', Time.now).order('show_date ASC')
 
   respond_to do |format|
-    format.json { render :json => @concerts }
+    format.json { render :json => {
+         :caption => @concerts.collect(&:title),
+         :id => @concerts.collect(&:id),
+         :preview_url => @concerts.collect(&:image),
+         :url => '/konserter/'+@concerts.collect(&:id)
+
+        } 
+    }
  
   end
 end
