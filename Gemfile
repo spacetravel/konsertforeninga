@@ -7,7 +7,6 @@ gem 'paperclip'
 gem 'tinymce_rails'
 gem 'aws-s3'
 gem 'aws-sdk'
-gem 'carousel' 
 
 group :development, :test do
   gem 'annotate', '2.5.0'
