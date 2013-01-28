@@ -4,7 +4,7 @@
 <div id="konsertkarusell" class="carousel slide"><!-- class of slide for animation -->
   <div class="carousel-inner" >
     <div class="item active" ><!-- class of active since it's the first item -->
-      <a href="<%= link_to '/konserter/'+ @second_concert.id.to_s %>">
+      <a href="<%= link_to '/konserter/'+ @concerts.first.id.to_s %>">
       <img style="margin:0px auto;" src="<%= @concerts.first.photo.url(:large) %>" alt="" /></a>
       <div class="carousel-caption">
         <p> <%= link_to truncate(@concerts.first.title, length: 25), '/konserter/'+@concerts.first.id.to_s  %></p>
@@ -12,7 +12,9 @@
     </div>
 <% @concerts.each do |concert| %>
     <div class="item" ><!-- class of active since it's the first item -->
-      <img style="margin:0px auto;" src="<%= concert.photo.url(:large) %>" alt="" />
+       <a href="<%= link_to '/konserter/'+ concert.id.to_s %>">
+       <img style="margin:0px auto;" src="<%= concert.photo.url(:large) %>" alt="" />
+     </a>
       <div class="carousel-caption">
         <p><%= link_to truncate(concert.title, length: 25), '/konserter/'+concert.id.to_s %></p>
       </div>
