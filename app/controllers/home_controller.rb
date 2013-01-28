@@ -10,19 +10,13 @@ class HomeController < ApplicationController
 end
   
 def karusell
-  
+ 
   @concerts = Concert.where('show_date >= ?', Time.now).order('show_Date ASC')
 
   respond_to do |format|
     format.html # index.html.erb
     format.xml  { render :xml => @concerts }
-    format.json { render :json => {
-         :caption => @concerts.collect(&:title),
-         :id => @concerts.collect(&:id),
-         :preview_url => @concerts.collect(&:image),
-         :url => '/konserter/'+@concerts.collect(&:id)
-
-        } 
+    format.json { render :json => @concerts
     }
  
   end
