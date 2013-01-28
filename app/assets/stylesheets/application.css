@@ -13,5 +13,8 @@
  */
 
 .style_image 
-{	border: 1px solid #000;
+{	
+	border: 1px solid #000;
 }
+
+@import url('http://twitter.github.com/bootstrap/assets/css/bootstrap.css');
