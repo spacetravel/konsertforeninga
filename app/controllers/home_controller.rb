@@ -7,7 +7,11 @@ class HomeController < ApplicationController
 
     @second_concert = Concert.where('show_date >= ?', Time.now).order('show_Date ASC').second
   
-    @concerts = Concert.where('show_date >= ?', Time.now).order('show_Date ASC')
+end
+  
+def karusell
+  
+  @concerts = Concert.where('show_date >= ?', Time.now).order('show_Date ASC')
 
   respond_to do |format|
     format.html # index.html.erb
@@ -23,7 +27,6 @@ class HomeController < ApplicationController
  
   end
 end
-  
   def nyhet
     @nyhet = NewsBulletin.find(params[:id])
   end
