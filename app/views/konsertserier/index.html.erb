@@ -1,11 +1,11 @@
 <div class="container">
 	<div class="span10">
 		<h1>Konsertserier</h1><br />
-			<table class="tavle">
+			<table >
 				<tbody>
 					<% @series.each do |serie| %>
-				<td >
-					<div><h2><%= link_to serie.name, '/konsertserier/'+serie.id.to_s %></h2></div>
+				<td style="width:70%">
+					<h2><%= link_to serie.name, '/konsertserier/'+serie.id.to_s %></h2>
 					<div class="seriedesc"><%= serie.desc %></div>
 				</td>
 				<td>
