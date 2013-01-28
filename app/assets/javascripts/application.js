@@ -18,6 +18,8 @@
 //= require_tree .
 
 $(document).ready(function() {
+	$('#carousel-container').carousel("http://konsertforeninga.herokuapp.com/konsertkarusell/", 'horizontal');
+
 	tinyMCE.init({
 	  mode: 'textareas',
 	  theme: 'advanced'
