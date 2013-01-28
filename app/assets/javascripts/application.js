@@ -18,6 +18,7 @@
 
 $(document).ready(function() {
 
+	$('.carousel').carousel();
 
 	tinyMCE.init({
 	  mode: 'textareas',
