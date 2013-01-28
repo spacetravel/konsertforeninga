@@ -16,12 +16,11 @@ class HomeController < ApplicationController
          :caption => @concerts.collect(&:title),
          :id => @concerts.collect(&:id),
          :preview_url => @concerts.collect(&:image),
-         :url => '/konserter/'+@concerts.collect(&:id),
+         :url => '/konserter/'+@concerts.collect(&:id)
 
         } 
     }
  
-}
   end
 end
   
