@@ -15,6 +15,7 @@
 //= require jquery_ujs
 //= require bootstrap-transitions
 //= require bootstrap
+//= require self
 //= require_tree .
 
 
