@@ -3,10 +3,7 @@ class HomeController < ApplicationController
   def index
     @series = Serie.all
     
-    @first_concert = Concert.where('show_date >= ?', Time.now).order('show_date ASC').first
-
-    @second_concert = Concert.where('show_date >= ?', Time.now).order('show_date ASC').second
-  
+    @news = NewsBulletin.order('created_at DESC')
     @concerts = Concert.where('show_date >= ?', Time.now).order('show_date ASC').take(5)
 end
   
@@ -25,7 +22,7 @@ end
   end
   
   def about
-        @news = NewsBulletin.order('created_at DESC')
+
 
   end
   
