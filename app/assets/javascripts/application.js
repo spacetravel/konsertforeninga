@@ -13,6 +13,8 @@
 
 //= require jquery
 //= require jquery_ujs
+//= require bootstrap-transitions
+//= require bootstrap.min
 //= require_tree .
 
 

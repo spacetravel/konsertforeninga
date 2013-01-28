@@ -4,7 +4,7 @@ class HomeController < ApplicationController
     @series = Serie.all
     
     @news = NewsBulletin.order('created_at DESC')
-    @concerts = Concert.where('show_date >= ?', Time.now).order('show_date ASC').take(5)
+    @concerts = Concert.where('show_date >= ?', Time.now).order('show_date ASC').take(8)
 end
   
   def nyhet
