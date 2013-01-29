@@ -6,7 +6,7 @@
     <div class="item active" ><!-- class of active since it's the first item -->
       <%= link_to image_tag(@concerts.first.photo.url(:large), :style => "margin:0px auto;"), '/konserter/' + @concerts.first.id.to_s  %>
       <div class="carousel-caption">
-        <p><div class="linkkarusell"><%= link_to @concerts.first.serie.name+': '+@concerts.first.title, '/konserter/' + @concerts.first.id.to_s %></div><br />
+        <p><div class="linkkarusell"><%= @concerts.first.serie.name+': '+@concerts.first.title %></div><br />
               <%= l(@concerts.first.show_date,:format => '%d. %B %Y') %> | <%= @concerts.first.price %></p>
       </div>
     </div>
@@ -16,7 +16,7 @@
        <%= link_to image_tag(concert.photo.url(:large),:style => "margin:0px auto;"), '/konserter/' + concert.id.to_s %>
       <div class="carousel-caption">
         <p><div class="linkkarusell">
-            <%= link_to concert.serie.name+': '+concert.title, '/konserter/' + concert.id.to_s %></div><br />
+            <%=  concert.serie.name+': '+concert.title %></div><br />
               <%= l(concert.show_date,:format => '%d. %B %Y') %> | <%= concert.price %>
         </p>
       </div>
