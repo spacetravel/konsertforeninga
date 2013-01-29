@@ -1,12 +1,12 @@
 development:
-  bucket: konsertforeninga
-  access_key_id: AKIAIFKQQ4U7OZ3LY46A
-  secret_access_key: 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
+  bucket: kfbucket
+  access_key_id: AKIAIS6ASYTRAN7ALPQQ
+  secret_access_key: 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
 test:
   bucket: bucket-test
   access_key_id: xxx
   secret_access_key: xxx
 production:
-  bucket: konsertforeninga
-  access_key_id: AKIAIFKQQ4U7OZ3LY46A
-  secret_access_key: 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
+  bucket: kfbucket
+  access_key_id: AKIAIS6ASYTRAN7ALPQQ
+  secret_access_key: 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

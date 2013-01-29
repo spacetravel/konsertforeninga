@@ -12,6 +12,7 @@ gem 'bootstrap-sass'
 group :development, :test do
   gem 'annotate', '2.5.0'
   gem 'sqlite3'
+  gem 'turbo-sprockets-rails3'
 end
 
 # Bundle edge Rails instead:
