@@ -33,7 +33,7 @@ class Concert < ActiveRecord::Base
      :styles => { :large => "600x600", :medium => "300x300>", :thumb => "100x100>" },
      :path => "/system/:class/:id/:style/:filename",
      :storage => :s3,
-     :bucket => 'kfbucket',
+     :bucket => 'konsertforeninga',
      :url  => ":s3_eu_url",
      :s3_credentials => "#{Rails.root}/config/s3.yml"
         
