@@ -4,7 +4,7 @@
 <div id="konsertkarusell" class="carousel slide"><!-- class of slide for animation -->
   <div class="carousel-inner" >
     <div class="item active" ><!-- class of active since it's the first item -->
-      <%= image_tag(@concerts.first.photo.url(:large), :style => "margin:0px auto;") %>
+      <%= link_to image_tag(@concerts.first.photo.url(:large), :style => "margin:0px auto;"), '/konserter/' + @concerts.first.id.to_s  %>
       <div class="carousel-caption">
         <p><div class="linkkarusell"><%= link_to @concerts.first.serie.name+': '+@concerts.first.title, '/konserter/' + @concerts.first.id.to_s %></div><br />
               <%= l(@concerts.first.show_date,:format => '%d. %B %Y') %> | <%= @concerts.first.price %></p>
@@ -13,7 +13,7 @@
 <% @concerts.each do |concert| %>
     <% unless concert.id == @concerts.first.id %>
     <div class="item" ><!-- class of active since it's the first item -->
-       <%= image_tag(concert.photo.url(:large),:style => "margin:0px auto;") %>
+       <%= link_to image_tag(concert.photo.url(:large),:style => "margin:0px auto;"), '/konserter/' + concert.id.to_s %>
       <div class="carousel-caption">
         <p><div class="linkkarusell">
             <%= link_to concert.serie.name+': '+concert.title, '/konserter/' + concert.id.to_s %></div><br />
