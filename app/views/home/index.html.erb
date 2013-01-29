@@ -15,7 +15,7 @@
 		<div class="span4" style="min-height:230px; padding:auto">
 			<%= link_to image_tag(serie.photo.url(:medium)), '/konsertserier/'+serie.id.to_s %><br /><br />
 				<table class="table table-condensed" >
-					<% serie.concerts.where("show_date > ?", Time.now).order('show_date ASC').take(4).each do |concert| %>
+					<% serie.concerts.where("show_date >= ?", Time.now).order('show_date ASC').take(4).each do |concert| %>
 						<tr><td><%= link_to truncate(concert.title, :length => 30), '/konserter/'+concert.id.to_s %></td><td><%= l(concert.show_date, :format => '%d. %b') %></td></tr>
 					<% end %>
 				</table>
