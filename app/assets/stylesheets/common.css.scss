@@ -96,3 +96,14 @@ height: 20px;
 clear:both;
 color:#fff;
 }
+
+.linkkarusell {
+  color: #FFFFFF;
+  font-size:18px;
+}
+
+a.linkkarusell:link, a.linkkarusell:visited, a:linkkarusell:hover, a.linkkarusell:active
+{
+  color: #ff0000;
+  text-decoration:none;
+}
