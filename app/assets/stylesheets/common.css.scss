@@ -100,10 +100,22 @@ color:#fff;
 .linkkarusell {
   color: #FFFFFF;
   font-size:18px;
+   &:link {
+      color:#FFFFFF
+      text-decoration:none;
+   }  
+   &:visited {
+      color:#FFFFFF
+      text-decoration:none;
+   }  
+   &:hover {
+      color:#FFFFFF
+      text-decoration:none;
+   }  
+   &:active {
+      color:#FFFFFF
+      text-decoration:none;
+   }  
+
 }
 
-a.linkkarusell:link, a.linkkarusell:visited, a:linkkarusell:hover, a.linkkarusell:active
-{
-  color: #FFFFFF;
-  text-decoration:none;
-}
