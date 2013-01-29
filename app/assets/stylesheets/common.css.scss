@@ -98,26 +98,26 @@ color:#fff;
 }
 
 .linkkarusell a {
-  color:white
+  color:white !important;
 }
 
 .linkkarusell {
   color: #FFFFFF;
   font-size:18px;
    &:link {
-      color:#FFFFFF
+      color:#FFFFFF;
       text-decoration:none;
    }  
    &:visited {
-      color:#FFFFFF
+      color:#FFFFFF;
       text-decoration:none;
    }  
    &:hover {
-      color:#FFFFFF
+      color:#FFFFFF;
       text-decoration:none;
    }  
    &:active {
-      color:#FFFFFF
+      color:#FFFFFF;
       text-decoration:none;
    }  
 
