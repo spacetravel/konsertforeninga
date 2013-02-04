@@ -25,7 +25,7 @@ class NewsBulletin < ActiveRecord::Base
      :styles => { :large => "300x300>", :medium => "200x200>", :thumb => "50x50>" },
      :path => "/system/:class/:id/:style/:filename",
      :storage => :s3,
-     :bucket => 'konsertforeninga',
+     :bucket => 'kfbucket',
      :url  => ":s3_eu_url",
      :s3_credentials => "#{Rails.root}/config/s3.yml"
 
