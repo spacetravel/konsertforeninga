@@ -30,7 +30,7 @@
 		<!-- Begin MailChimp Signup Form -->
 <link href="http://cdn-images.mailchimp.com/embedcode/slim-081711.css" rel="stylesheet" type="text/css">
 <style type="text/css">
-	#mc_embed_signup{background:#fff;}
+	#mc_embed_signup{background:#fff;width:90%; text-align:center;}
 	/* Add your own MailChimp form style overrides in your site stylesheet or in this style block.
 	   We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
 </style>
@@ -44,12 +44,12 @@
 
 
 <!--End mc_embed_signup-->
-	<div class="span9">
-		<hr style="color: #000; background: #000; width: 100%; height: 5px;">
+	<div class="span8">
+		<hr style="color: #000; background: #000; width: 100%; height: 5px; margin-left:25px">
 	</div>
 	<div class="span8" style="margin-left:40px">
 			
-			<div class="span8" style="text-align:center"><h2>Siste nytt fra Konsertforeninga</h2></div>
+			<div  style="text-align:center"><h2>Siste nytt fra Konsertforeninga</h2></div>
 		
 			<table class="table">
 			<% @news.take(4).each do |nyhet| %>
