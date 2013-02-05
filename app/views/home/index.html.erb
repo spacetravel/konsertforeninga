@@ -30,7 +30,7 @@
 		<!-- Begin MailChimp Signup Form -->
 <link href="http://cdn-images.mailchimp.com/embedcode/slim-081711.css" rel="stylesheet" type="text/css">
 <style type="text/css">
-	#mc_embed_signup{background:#fff;width:90%; text-align:center;}
+	#mc_embed_signup{background:#fff;width:100%; text-align:center; margin:0px auto;}
 	/* Add your own MailChimp form style overrides in your site stylesheet or in this style block.
 	   We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
 </style>
@@ -55,7 +55,7 @@
 			<% @news.take(5).each do |nyhet| %>
 				<tbody>
 					<tr>
-						<td style="text-align:center">[<%= nyhet.serie.name %>] <%= link_to nyhet.title, '/nyheter/'+nyhet.id.to_s %></td>
+						<td style="text-align:center"><b>[<%= nyhet.serie.name %>]</b> <%= link_to nyhet.title, '/nyheter/'+nyhet.id.to_s %></td>
 					</tr>
 				</tbody>
 			<% end %>
