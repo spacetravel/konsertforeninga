@@ -53,14 +53,8 @@
 			
 			<div  style="text-align:center"><h2>Siste nytt fra Konsertforeninga</h2></div>
 		
-			<table class="table">
 			<% @news.take(5).each do |nyhet| %>
-				<tbody>
-					<tr>
-						<td style="text-align:center"><b>[<%= nyhet.serie.name %>]</b> <%= link_to nyhet.title, '/nyheter/'+nyhet.id.to_s %></td>
-					</tr>
-				</tbody>
-			<% end %>
+						<div style="text-align:center"><b>[<%= nyhet.serie.name %>]</b> <%= link_to nyhet.title, '/nyheter/'+nyhet.id.to_s %></div>
 			</table>
 		</div>
 
