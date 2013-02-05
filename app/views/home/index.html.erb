@@ -36,10 +36,10 @@
 </style>
 <div id="mc_embed_signup" class="span10">
 <form action="http://konsertforeninga.us6.list-manage1.com/subscribe/post?u=f6e56758bcf921e7745b845cb&amp;id=18437c7e94" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-	<label for="mce-EMAIL" stylle="width:450;">Vil du motta vårt nyhetsbrev</label>
+	<label for="mce-EMAIL" stylle="width:450;text-align:center;">Vil du motta vårt nyhetsbrev</label>
 		<div style="float:left;"><input type="email" value="" style="width:300px;height:14px;" name="EMAIL" class="email" id="mce-EMAIL" placeholder="E-post" required></div>
 		<div style="float:left;"><input style="width:150px" type="submit" value="Meld deg på" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
-	
+
 </form>
 </div>
 
@@ -52,9 +52,15 @@
 			
 			<div  style="text-align:center"><h2>Siste nytt fra Konsertforeninga</h2></div>
 		
+			<table class="table">
 			<% @news.take(5).each do |nyhet| %>
-						<div style="text-align:center"><b>[<%= nyhet.serie.name %>]</b> <%= link_to nyhet.title, '/nyheter/'+nyhet.id.to_s %></div>
+				<tbody>
+					<tr>
+						<td style="text-align:center"><b>[<%= nyhet.serie.name %>]</b> <%= link_to nyhet.title, '/nyheter/'+nyhet.id.to_s %></td>
+					</tr>
+				</tbody>
 			<% end %>
+			</table>
 		</div>
 
 </div>
